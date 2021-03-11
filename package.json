@@ -1,0 +1,25 @@
+{
+    "name": "src-vscode",
+    "displayName": "SRC",
+    "description": "Add support to editing SRC data and eve.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "src",
+            "aliases": ["SRC", "src"],
+            "extensions": [".eve",".txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "src",
+            "scopeName": "include.eve",
+            "path": "./syntaxes/src.tmLanguage.json"
+        }]
+    }
+}
