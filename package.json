@@ -11,15 +11,24 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "src",
-            "aliases": ["SRC", "src"],
-            "extensions": [".eve",".txt"],
-            "configuration": "./language-configuration.json"
+            "id": "src-eve",
+            "aliases": ["SRC-Event", "src-eve"],
+            "extensions": [".eve"],
+            "configuration": "./src-eve/language-configuration.json"
+        },{
+            "id": "src-data",
+            "aliases": ["SRC-Data", "src-data"],
+            "extensions": [".txt"],
+            "configuration": "./src-data/language-configuration.json"
         }],
         "grammars": [{
-            "language": "src",
-            "scopeName": "include.eve",
-            "path": "./syntaxes/src.tmLanguage.json"
+            "language": "src-eve",
+            "scopeName": "src.eve",
+            "path": "./src-eve/syntaxes/src.tmLanguage.json"
+        },{
+            "language": "src-data",
+            "scopeName": "src.txt",
+            "path": "./src-data/syntaxes/src.tmLanguage.json"
         }]
     }
 }
