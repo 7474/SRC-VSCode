@@ -24,7 +24,7 @@
 		},
 		"label": {
 			"patterns": [{
-				"match": "^([^\\s]+).*:$",
+				"match": "(?i)^([^\\s]+).*:$",
 				"captures": {
 					"1": {
 						"name": "entity.name.function.src"
