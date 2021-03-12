@@ -1,19 +1,19 @@
-name: 'Release Vscode Plugin'
+name: Publish Extension
 on:
   push:
     branches: [ master ]
+
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: npm install
-        uses: actions/npm@master
+      - uses: actions/setup-node@v1
         with:
-          args: install --unsafe-perm
-      - name: Vscode release plugin
-        uses: JCofman/vscodeaction@master
-        env:
-          PUBLISHER_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
+          node-version: 12
+      - run: npm ci
+      - name: Publish to Visual Studio Marketplace
+        uses: HaaLeo/publish-vscode-extension@v0
         with:
-          args: publish -p $PUBLISHER_TOKEN
+          pat: ${{ secrets.PUBLISHER_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com
