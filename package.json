@@ -3,6 +3,7 @@
     "displayName": "SRC",
     "description": "Add support to editing SRC data and eve.",
     "version": "0.0.1",
+    "publisher": "koudenpa",
     "engines": {
         "vscode": "^1.54.0"
     },
