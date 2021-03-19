@@ -20,6 +20,8 @@ SRC - Simulation RPG Construction - のデータ・シナリオ開発向けプ�
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.x
 
 Initial release.
+
+And then trial and error. I will not write the release notes in detail. 
